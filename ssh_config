@@ -1,0 +1,6 @@
+Host remote-ssh-server
+    HostName your.ssh.server
+    User your_username
+    Port 22
+    IdentityFile /path/to/your/private/key
+    DynamicForward 0.0.0.0:1080
