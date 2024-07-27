@@ -17,7 +17,8 @@ Save the following content into respective files in a directory.
 
 #### Dockerfile
 
-```FROM debian:latest
+```
+FROM debian:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
@@ -42,7 +43,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 #### ssh_config
 
-```Host remote-ssh-server
+```
+Host remote-ssh-server
     HostName your.ssh.server
     User your_username
     Port 22
@@ -52,7 +54,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 #### danted.conf
 
-```logoutput: stderr
+```
+logoutput: stderr
 
 internal: 0.0.0.0 port = 1080
 external: eth0
@@ -73,7 +76,8 @@ socks pass {
 
 #### entrypoint.sh
 
-```#!/bin/bash
+```
+#!/bin/bash
 
 # Function to establish the SSH tunnel
 establish_tunnel() {
@@ -153,7 +157,8 @@ When starting other containers, set the environment variable `ALL_PROXY` to `soc
 
 Example `docker-compose.yml`:
 
-```version: '3'
+```
+version: '3'
 services:
   web:
     image: your-web-image
